@@ -19,33 +19,39 @@ filesize = float(input("what's your file size ? "))
 print(file_access(filename, filesize))
 
 
-# Second Tool :- E-Commerce web billing and discount app 
+# Second Tool :- Taxi charges calculator 
 
-def bill_calculate(amount, day):
-    if amount <= 0:
-        return "!ERROR: Invalid Input"
-    elif 1 >= day >= 31:
-        return "!ERROR: Invalid Input"
-    elif amount >= 5000:
-        discount = amount * (20 // 100)
-        final_amount = amount - discount
-        
-        if day % 2 == 0:
-            return f"your wihtout discounted amount :{amount} and final discounted amount :{50 - final_amount}"
-        else:
-            return f"your wihtout discounted amount :{amount} and final discounted amount :{final_amount}"  
-    elif 1000 >= amount <= 4999:
-        discount = amount * (10 // 100)
-        final_amount = amount - discount
-        
-        if day % 2 == 0:
-            return f"your wihtout discounted amount :{amount} and final discounted amount :{50 - final_amount}"
-        else:
-            return f"your wihtout discounted amount :{amount} and final discounted amount :{final_amount}" 
-    elif amount <= 1000:
-        return f"there is not any discountso at this price your final billing price is :{amount}"
+def calculate_fare_price (distance_km, ride_hour, ride_count):
+    if distance_km <= 0:
+        return "ERROR: Invalid Ride Details"
+    elif not (0 <= ride_hour <= 23):
+        return "ERROR: Invalid Ride Details"
+    elif (ride_count < 1):
+        return "ERROR: Invalid Ride Details"
 
-undiscounted_amount = float(input("Sir please give us your billing price: "))
-day_of_purchasing = input("What's day today sir ? ")
+    booking_fee = 3.00
+    charges = 0
 
-print(bill_calculate(undiscounted_amount, day_of_purchasing))
+    if distance_km >= 20:
+        charges = distance_km * 1.20
+    elif  5 <= distance_km < 20:
+        charges = distance_km * 1.50
+    elif distance_km < 5:
+        charges = distance_km * 2.00
+
+    if (ride_hour >= 22) or (ride_hour <= 5):
+        charges = charges + 8 
+
+    if ride_count % 5 == 0:
+        charges = charges * 0.90
+
+    final_charge = charges + booking_fee
+    return f"Total fare charges = {final_charge:.2f}" 
+    
+
+
+distance = float(input("What's the distance of your ride sir, please provide in K.M. ? "))
+hour_of_day = int(input("What's the hour of the day is right now sir ? "))
+ride = int(input("Which ride is this for you ? "))
+
+print(calculate_fare_price(distance, hour_of_day, ride)) 
