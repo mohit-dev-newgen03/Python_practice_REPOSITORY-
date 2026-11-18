@@ -37,4 +37,16 @@ Feel free to explore the repository, try out some of the simple tools, and follo
 
 I'll do my best to document everything properly and keep improving along the way.
 
-**Thank you for visiting my repository!**
+*Thank you for visiting my repository!*
+
+
+**History of all the tools that I'll build along learning python**
+
+
+# 1st Tool :- File approval system according to extension and size.
+
+I didn't have to put in much effort to build this tool. I was able to create it quite easily using some of my previous practice, along with a few built-in functions and string methods.
+
+My main goal was to practise what I had learned in the previous lectures, so I used a combination of expressions and methods to build this tool.
+
+These are all just basic fundamentals, and I used them to create this small tool while practising what I had learned.
