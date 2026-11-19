@@ -80,3 +80,33 @@ def shopping_cart(item_list):
 
 cart_items = ast.literal_eval(input("Please provide items list sir: "))
 print(shopping_cart(cart_items))
+
+
+# 4th Tool :- Expense tracker (total, hgihest, and average expenses)
+
+def summarize_expenses(expenses):
+    if not expenses:
+        return "No expenses recorded!"
+
+    Total_expenses = 0
+    Total_counts = 0
+    for expense in expenses:
+         Total_expenses += expense
+         Total_counts += 1
+
+    Highest_expenses = max(expenses)
+    Average_expenses = Total_expenses / Total_counts
+
+    return f"Total: {Total_expenses:.2f} | Highest: {Highest_expenses:.2f} | Avg: {Average_expenses:.2f}"
+
+
+expense_list = []
+
+while True:
+    user_input = input("Enter expense (or 'done' to finish): ")
+    if user_input == "done":
+        break
+    else:
+        expense_list.append(float(user_input))
+
+print(summarize_expenses(expense_list))
