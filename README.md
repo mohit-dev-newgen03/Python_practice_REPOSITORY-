@@ -88,3 +88,20 @@ There is still one limitation: the user has to enter the prices inside square br
 As I learn more functions like `map()` and other built-in methods, I'll try to improve this tool further.
 
 **Also, this is my first task involving Python lists, so it was a good learning experience for me!**
+
+
+# 4th Tool :- Expense tracker (total, hgihest, and average expenses)
+
+This tool took me a little more time to build. I created an Expense Tracker that takes expenses from the user one by one and stops when the user types `done`.
+
+It stores all the expenses in a list and calculates the total amount spent, saving it in a variable called `total_expenses`.
+
+After that, it finds the highest expense and stores it in `highest_expense`. Finally, it calculates the average expense and stores it in another variable.
+
+At first, I got a little stuck trying to figure out how to find the highest value from the list. I initially thought about creating a loop and using conditionals to solve this.
+
+However, while testing my code and searching for a solution on Google, I discovered that Python has a built-in function called `max()` that can do this much more easily.
+
+So, I used `max()` and finally managed to complete the tool!
+
+It was another good learning experience, and I'm gradually getting more comfortable with Python lists, loops, conditionals, and built-in functions.
