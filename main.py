@@ -55,3 +55,28 @@ hour_of_day = int(input("What's the hour of the day is right now sir ? "))
 ride = int(input("Which ride is this for you ? "))
 
 print(calculate_fare_price(distance, hour_of_day, ride)) 
+
+
+# 3rd Tool :- Shoping cart calculator using list
+
+import ast
+
+def shopping_cart(item_list):
+    total = 0
+    item_quantity = 0
+
+    for item in item_list:
+        if item <= 0:
+            continue
+        else:
+            total += item
+            item_quantity += 1
+
+    if item_quantity == 0:
+        return "Cart is empty!"
+    else:
+        return f"Items: {item_quantity} | Total: ${total:.2f}"
+
+
+cart_items = ast.literal_eval(input("Please provide items list sir: "))
+print(shopping_cart(cart_items))
