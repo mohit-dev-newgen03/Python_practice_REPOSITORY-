@@ -67,3 +67,24 @@ This tool calculates taxi fares in USD. It includes:
 - Night charges.
 - Booking fees.
 - Discounts on every 5th ride (5th, 10th, 15th, and so on).
+
+
+# 3rd Tool :- Shoping cart calculator using list
+
+I built this tool to calculate the total of a shopping cart. It takes a list of item prices from the user as input, removes invalid prices such as negative and zero values, and then calculates the total cost along with the number of valid items added to the cart.
+
+While building this tool, I faced a few challenges.
+
+The first issue was that values received through `input()` are strings, not lists. So, I initially thought about how to convert that input into a list. I took a wrong approach at first, but based on my understanding at the time, it seemed like the right thing to do.
+
+I wrapped the input in parentheses and added `list` before it, thinking that would solve the problem. However, I got an error.
+
+Instead of giving up, I looked more closely at the error and tried to understand what was going wrong. After some research, I found that `ast.literal_eval()` could help me convert the input into a Python list.
+
+But I made another mistake: I used the method without importing `ast`, so it wasn't working. After thinking about it a little more, I finally figured out the issue and solved it!
+
+There is still one limitation: the user has to enter the prices inside square brackets (`[]`), otherwise `ast.literal_eval()` may fail. However, the core logic works correctly.
+
+As I learn more functions like `map()` and other built-in methods, I'll try to improve this tool further.
+
+**Also, this is my first task involving Python lists, so it was a good learning experience for me!**
