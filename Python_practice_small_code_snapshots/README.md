@@ -16,3 +16,10 @@ That's exactly why I created this folder — to keep my small practice projects 
 I wrote this code just to learn and practise the `try-except` block. There's nothing particularly special about it, but I learned how we can make our code safer by handling potential errors.
 
 Along with that, I also learned a little about making my code shorter and more concise. I'll keep practising and try to write cleaner and shorter code in my future projects as well.
+
+
+# Tool 2 : User's profile output 
+
+The main purpose of building this tool was to learn more about Python dictionaries, especially how to add values to a dictionary and handle default values using the `.get()` method.
+
+These concepts are quite useful, especially when working on different backend development projects in the future, so I wanted to understand and practise them properly.
