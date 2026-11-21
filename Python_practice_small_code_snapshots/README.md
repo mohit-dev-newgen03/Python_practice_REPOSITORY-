@@ -9,3 +9,10 @@ In this folder, I'll keep smaller tools that I create while learning new Python 
 I'll also document each tool and explain how it works in the README file inside this folder.
 
 That's exactly why I created this folder — to keep my small practice projects separate and organised.
+
+
+# Tool 1 : User's age checking system
+
+I wrote this code just to learn and practise the `try-except` block. There's nothing particularly special about it, but I learned how we can make our code safer by handling potential errors.
+
+Along with that, I also learned a little about making my code shorter and more concise. I'll keep practising and try to write cleaner and shorter code in my future projects as well.
