@@ -35,3 +35,39 @@ user_city = input("What's your cities name sir ? ")
 user_skills = input("What are your skills sir ? ")
 
 print(user_profile(user_name, user_city, user_skills))
+
+
+# Tool 3 : Highest marks from the students list
+
+def get_studentdata_list():
+    students_data_list = []
+
+    while True:
+        student_name = input("Enter student name (or 'done'): ").strip().title()
+        if student_name == "Done":
+            break
+
+        student_marks = float(input("Enter students marks: "))
+
+        students_data_dict = {}
+        students_data_dict["name"] = student_name
+        students_data_dict["marks"] = student_marks
+        students_data_list.append(students_data_dict)
+        
+    return students_data_list
+
+def student_marks_calculator(student_list):
+    if not student_list:
+        return "No students registered!"
+
+    topper_name = " " 
+    highest_marks = -1
+    for student in student_list:
+        if student["marks"] > highest_marks:
+            highest_marks = student["marks"]
+            topper_name = student["name"]
+
+    return f"Toppers name: {topper_name} and his highest marks: {highest_marks}"        
+
+        
+print(student_marks_calculator(get_studentdata_list()))
