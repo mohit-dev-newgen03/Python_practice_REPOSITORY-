@@ -23,3 +23,16 @@ Along with that, I also learned a little about making my code shorter and more c
 The main purpose of building this tool was to learn more about Python dictionaries, especially how to add values to a dictionary and handle default values using the `.get()` method.
 
 These concepts are quite useful, especially when working on different backend development projects in the future, so I wanted to understand and practise them properly.
+
+
+# Tool 3 : Highest marks from the students list
+
+This tool was a little more challenging and involved more work than my previous ones.
+
+While building it, I learned how to take student names and their marks as input from the user, store them in dictionaries, and then add those dictionaries to a list.
+
+After that, I used a loop to go through the list and find the student with the highest marks, along with their name and score, and return the result.
+
+I had never worked with loops alongside dictionaries and lists like this before, so it was a really fun learning experience!
+
+I also had a little hesitation when it came to writing code on my own, but that hesitation is slowly starting to fade away. I'm gradually becoming more confident, and that's what makes this journey even more enjoyable.
