@@ -65,3 +65,12 @@ However, while testing my code and searching for a solution on Google, I discove
 So, I used `max()` and finally managed to complete the tool!
 
 It was another good learning experience, and I'm gradually getting more comfortable with Python lists, loops, conditionals, and built-in functions.
+
+
+# Tool 5 : Printig user's favourite singers top 3 song and there tracks 
+
+In this code that I wrote, titled “Tool 5: Printing the user's favourite singers' top 3 songs and their tracks,” I spent the most time today, 25/11/2026.
+
+The reason was that I searched a lot of things to complete it, and I used things in it that were a first for me. I called the API and used the data that came from it to print the output. Along with that, I also checked validation—whether the data coming from the API is empty, whether the website is down, or whether the user has given the wrong name—so I tested these kinds of edge cases here.
+
+In this, I saw bugs multiple times and solved them. Once it started returning None, but I saw that the reason was that I hadn’t used return in the function at all. Then once, the same loop kept returning the same name and album again and again—the output kept coming repeatedly—but the reason was that I had initialized the dict outside the loop. But then, in the end, I fixed everything slowly, and finally I fixed it, and I got the output I wanted.
