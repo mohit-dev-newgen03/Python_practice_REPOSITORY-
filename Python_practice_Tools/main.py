@@ -1,4 +1,4 @@
-# First tool :- File approval system according to extension and size.
+# 1 Tool :- File approval system according to extension and size.
 
 def file_access(file, size):
     file_name = file.strip().lower()
@@ -19,7 +19,7 @@ filesize = float(input("what's your file size ? "))
 print(file_access(filename, filesize))
 
 
-# Second Tool :- Taxi charges calculator 
+# 2 Tool :- Taxi charges calculator 
 
 def calculate_fare_price (distance_km, ride_hour, ride_count):
     if distance_km <= 0:
