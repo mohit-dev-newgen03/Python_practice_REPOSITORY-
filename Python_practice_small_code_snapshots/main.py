@@ -71,3 +71,20 @@ def student_marks_calculator(student_list):
 
         
 print(student_marks_calculator(get_studentdata_list()))
+
+
+# Tool 4 : Giving user its server name and port number 
+
+import sys
+import random
+
+
+if len(sys.argv) == 1:
+    sys.exit("Usage: python server_assign.py <your_name>")
+elif len(sys.argv) > 2:
+    sys.exit("Error: Please provide only single word name or wrap in quotes")
+
+server_name = random.choice(["AWS-US-East", "AWS-EU-Central", "GCP-Asia-South"])
+port_number = random.randint(1000, 9999)
+
+print(f"Assigned Server for {sys.argv[1]}: {server_name}:{port_number}")
