@@ -88,3 +88,29 @@ server_name = random.choice(["AWS-US-East", "AWS-EU-Central", "GCP-Asia-South"])
 port_number = random.randint(1000, 9999)
 
 print(f"Assigned Server for {sys.argv[1]}: {server_name}:{port_number}")
+
+
+# Tool 5 : Using API for first time, Cat facts and there length
+
+import sys
+import requests
+
+url = "https://catfact.ninja/fact"
+response = requests.get(url)
+
+if response.status_code != 200:
+    sys.exit(f"API Error! Server returned status: {response.status_code}")
+
+data = response.json()
+cat_fact = data["fact"]
+length = data["length"]
+catagory = ""
+
+if length < 80 :
+    catagory = "[QUICK READ]"
+else:
+    catagory = "[DETAILED READ]"
+
+print(f"Category: {catagory}")
+print(f"Facts: {cat_fact}")
+print(f"Length: {length}")    
