@@ -45,3 +45,10 @@ This was a small terminal-based tool that checks the user's name and assigns the
 My main purpose behind building it was to explore something new, especially how Python libraries work and how we can exit a Python program using the `sys.exit()` method.
 
 Overall, it was a simple but useful project that helped me learn a few new things while practising Python.
+
+
+# Tool 5 : Using API for first time, Cat facts and there length
+
+This code is where I used an API for the first time. And in this, if the API fails and a broken response comes, then the code won’t fail—instead, it will automatically exit the file and won’t execute.
+
+In this, that response will be used, and based on its length, it will be decided how to read it—quick read or detailed read. This was a small code, but it was foundational.
