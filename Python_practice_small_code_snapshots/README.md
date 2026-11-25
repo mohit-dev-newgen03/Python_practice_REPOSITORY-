@@ -36,3 +36,12 @@ After that, I used a loop to go through the list and find the student with the h
 I had never worked with loops alongside dictionaries and lists like this before, so it was a really fun learning experience!
 
 I also had a little hesitation when it came to writing code on my own, but that hesitation is slowly starting to fade away. I'm gradually becoming more confident, and that's what makes this journey even more enjoyable.
+
+
+# Tool 4 : Giving user its server name and port number 
+
+This was a small terminal-based tool that checks the user's name and assigns them a server name and port number. It wasn't a particularly complex tool, and its functionality was quite basic.
+
+My main purpose behind building it was to explore something new, especially how Python libraries work and how we can exit a Python program using the `sys.exit()` method.
+
+Overall, it was a simple but useful project that helped me learn a few new things while practising Python.
