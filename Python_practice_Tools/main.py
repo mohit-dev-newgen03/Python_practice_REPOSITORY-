@@ -110,3 +110,56 @@ while True:
         expense_list.append(float(user_input))
 
 print(summarize_expenses(expense_list))
+
+
+# Tool 5 : Printig user's favourite singers top 3 song and there tracks 
+
+import sys
+import requests
+
+
+artist_name = input("Enter artist name: ").strip()
+if not artist_name:
+    sys.exit("Artist name cannot be empty!")
+
+url = "https://itunes.apple.com/search"
+param = {
+    "term" : artist_name,
+    "limit" : 3,
+    "entity" : "song"
+}
+
+def url_and_permissions():
+    response = requests.get(url, params=param)
+
+    if response.status_code != 200:
+        sys.exit(f"API request failed! {response.status_code}")
+
+    data = response.json()
+    
+    if data.get("resultCount", 0) == 0:
+        sys.exit("No songs found for this artist!")
+
+    song_list = []
+
+    for song in data["results"]:
+
+        song_name = song.get("trackName", "Unknown")
+        album_name = song.get("collectionName", "single")
+        song_price = song.get("trackPrice", 0.0)    
+
+        song_dict = {
+                    "Track_name" : song_name, 
+                    "Album_name" : album_name, 
+                    "Price" : song_price
+                    }
+        
+        song_list.append(song_dict)
+
+    return song_list
+
+
+songs = url_and_permissions()
+print(f"\n--- Top 3 Songs of '{artist_name}' ---")
+for index, song in enumerate(songs, start=1):
+    print(f"{index}. {song['track']} | Album: {song['album']} | Price: ${song['price']:.2f}") 
