@@ -163,3 +163,41 @@ songs = url_and_permissions()
 print(f"\n--- Top 3 Songs of '{artist_name}' ---")
 for index, song in enumerate(songs, start=1):
     print(f"{index}. {song['track']} | Album: {song['album']} | Price: ${song['price']:.2f}") 
+
+
+# Tool 6 : Currency converter against USD 
+
+import sys
+import requests
+
+def currency_converter():
+
+    users_input = float(input("Enter amount in USD $: "))
+    target_currency = input("Target Currency (INR, EUR, GBP): ").strip().upper()
+
+    api_url = "https://open.er-api.com/v6/latest/USD"
+    response = requests.get(api_url)
+
+    if response.status_code != 200:
+        sys.exit("We are facing some server errors! we'll be back")
+
+    api_data = response.json()
+    rates = api_data.get("rates", {})
+
+    if target_currency not in rates:
+        sys.exit("Invalid currency code!")
+
+    usd_amounts = rates["USD"]
+    targeted_currency_rate = rates[target_currency]
+    converted_amount = targeted_currency_rate * users_input
+    fee = converted_amount * 0.02
+
+    final_recieved_amount = converted_amount - fee
+    return f""" --- Currency exchange report ---
+    Exchange rate: {usd_amounts} USD = {targeted_currency_rate:.2f} {target_currency} 
+    Converted amount: {converted_amount:,.2f} {target_currency}  
+    Conversion fee (2%): {fee:.2f} {target_currency} 
+    Final Received: {final_recieved_amount:.2f} {target_currency}
+            """
+
+print(currency_converter())
