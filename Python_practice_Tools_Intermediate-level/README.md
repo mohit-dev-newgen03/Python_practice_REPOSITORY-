@@ -12,7 +12,7 @@ My main goal was to practise what I had learned in the previous lectures, so I u
 These are all just basic fundamentals, and I used them to create this small tool while practising what I had learned.
 
 
-# Second Tool :- Taxi charges calculator
+# 2 Tool :- Taxi charges calculator
 
 Before building this small taxi fare calculator, I had created a similar tool for calculating e-commerce purchase bills. However, in that project, I used `return` statements almost everywhere, which made the code look quite messy and cluttered. So, I decided not to include that project here.
 
