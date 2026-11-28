@@ -74,3 +74,14 @@ In this code that I wrote, titled “Tool 5: Printing the user's favourite singe
 The reason was that I searched a lot of things to complete it, and I used things in it that were a first for me. I called the API and used the data that came from it to print the output. Along with that, I also checked validation—whether the data coming from the API is empty, whether the website is down, or whether the user has given the wrong name—so I tested these kinds of edge cases here.
 
 In this, I saw bugs multiple times and solved them. Once it started returning None, but I saw that the reason was that I hadn’t used return in the function at all. Then once, the same loop kept returning the same name and album again and again—the output kept coming repeatedly—but the reason was that I had initialized the dict outside the loop. But then, in the end, I fixed everything slowly, and finally I fixed it, and I got the output I wanted.
+
+
+# Tool 6 : Currency converter against USD
+
+In this tool, I made a currency converter. In this, I also kept edge cases in mind. Although this is my learning phase, 
+so AI is helping me fully in this, but I keep getting to learn new things, 
+such as making the code small and clean and readable, then making the code efficient, 
+avoiding too much deep and nested use, and along with that staying safe from error clauses and keeping an eye on them, 
+and thinking of as many edge cases as possible and handling them well in advance, and informing the user about them. 
+
+In making this tool too, I learned this same thing, and it was just a small usable tool that calculates the total amount of any currency anywhere in exchange for USD by taking USD input from you.
